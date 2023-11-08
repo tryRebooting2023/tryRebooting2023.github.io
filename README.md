@@ -30,7 +30,7 @@ When you retrieve the app at http://localhost:3000, this is what should be displ
 
 #### Project breakdown
 
-<img src="doc/Ask-Us-flowchart.png>
+<img src="doc/Ask-Us-flowchart.png">
 
 
 
