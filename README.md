@@ -37,6 +37,10 @@ The blue text boxes are previous questions asked by the user, and the green text
 <img src="doc/Ask-Us-flowchart.png">
 Articles are split into sections of relevant paragraphs. They are then given an embedding by the OPENAI API which is then stored in a vector database. The user submits a question which receives an embedding as well, which is then compared to the vector database returning article embeddings with the highest cosine similarity. These embeddings are then processed by GPT 3.5 which answers the users question in a conversational format. 
 
+#### Development history
+
+[M1](https://github.com/orgs/tryRebooting2023/projects/1/views/1)
+
 ### Team Contract Link:
 [Click Here](https://docs.google.com/document/d/15H0tS0bpVW0NQiGvWMAU79zyLRmt6mj2KbrBsFjrVd8/edit?usp=sharing)
 
