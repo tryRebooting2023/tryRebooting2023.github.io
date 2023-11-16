@@ -41,7 +41,9 @@ On the other end, OpenAI was also used to provide the chat bot. We set up the bo
 #### Development history
 
 [M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1)  
-[M2 - November 15 - Present](https://github.com/orgs/tryRebooting2023/projects/2/views/1)
+[M2 - November 15 - Present](https://github.com/orgs/tryRebooting2023/projects/2/views/1)  
+  
+As previously stated, we plan to update the site's user and admin pages to enable additonal features. The user feedback page is the first new page we will create. It's implementation will involve setting up a new collection on MongoDB, displaying a form after each chatbot response for users to interact with, and creating the admin-only-accessible page which should display the feedback data. The last additional page we plan to implement is a tutorial page, which we will have accessible through the navigation bar.
 
 ### Team Contract Link:
 [Click Here](https://docs.google.com/document/d/15H0tS0bpVW0NQiGvWMAU79zyLRmt6mj2KbrBsFjrVd8/edit?usp=sharing)
