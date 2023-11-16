@@ -36,7 +36,8 @@ Articles are split into sections of relevant paragraphs. They are then given an 
 
 #### Development history
 
-[M1](https://github.com/orgs/tryRebooting2023/projects/1/views/1)
+[M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1)
+[M2 - November 15 - Present](https://github.com/orgs/tryRebooting2023/projects/2/views/1)
 
 ### Team Contract Link:
 [Click Here](https://docs.google.com/document/d/15H0tS0bpVW0NQiGvWMAU79zyLRmt6mj2KbrBsFjrVd8/edit?usp=sharing)
