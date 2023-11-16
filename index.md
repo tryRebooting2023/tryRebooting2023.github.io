@@ -28,9 +28,21 @@ Users will immediately be allowed to use the Chat function upon landing. This is
 
 #### Once logged in
 
-<img src="doc/M1_Progress.png">
+<img src="doc/light-mode.png">
 
 Users are either admin or non-admin. Their home pages are currently identical, but we do plan to implement additional features for logged in users. For admin users, in particular, we will grant them access to a 'user feedback' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating. This will be discussed in a later section. Non-Admins will have the chat updated to generate a form with each response asking if the response was good or bad. This information will be archived to the 'user feedback' page. 
+
+#### Dark mode
+
+<img src="doc/M1_Landing.png">
+
+We also offer a "dark mode" that the user may toggle on/off with the switch. This feature was decided as necessary as it reduces eye strain and cuts glare, especially at nighttime. We strive to maximize our audience's comfort while using our application. We have future ideas for personalization features to better satisfy a broad range of preferences.
+
+#### Scrolling through a message
+
+<img src="doc/scroll-feature.png">
+
+When a response is large enough, we enable a scrollable feature for that single response in order to reduce the space taken up by the number of responses. As seen in the screenshot, the user is able to scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response.
 
 #### Project breakdown
 
