@@ -1,4 +1,6 @@
-# tryRebooting
+---
+layout: default
+---
 
 ## [Our Application's Deployment](http://137.184.70.155/)
 
