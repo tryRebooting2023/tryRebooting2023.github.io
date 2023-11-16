@@ -3,6 +3,3 @@ description: An AI implementation on the Ask Us page to improve search queries
 google_analytics:
 show_downloads: true
 theme: just-the-docs
-
-gems:
-  - jekyll-mentions
