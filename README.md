@@ -1,3 +1,6 @@
+![ci-badge](https://github.com/tryRebooting2023/askus/workflows/its-ask-us/badge.svg)
+
+
 ### Team Members
 
 This application is designed, implemented, and maintained by [James Ligeralde](https://jligeral.github.io/), [Frances Michelle Uy](https://frances-uy.github.io/), [Jonathan Sapolu](https://jsapolu99.github.io/) and [Michelle Ho](https://michho8.github.io/).
