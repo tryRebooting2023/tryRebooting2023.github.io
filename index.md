@@ -2,6 +2,7 @@
 layout: default
 ---
 ## tryRebooting's Ask Us
+![ci-badge](https://github.com/tryRebooting2023/askus/workflows/its-ask-us/badge.svg)
 ## [Our Application's Deployment](http://137.184.70.155/)
 
 ### Strategy
