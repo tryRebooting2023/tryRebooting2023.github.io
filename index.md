@@ -1,14 +1,29 @@
 ---
 layout: default
 ---
-## tryRebooting's Ask Us
+# tryRebooting's Ask Us
 ## [Our Application's Deployment](http://137.184.70.155/)
+
+## Table of Contents
+- [Strategy](#strategy)
+- [ITS Ask Us Overview](#its-ask-us-overview)
+- [The Application Anatomy](#the-application-anatomy)
+- [Landing Page](#landing-page)
+  - [Navigation Bar](#navigation-bar)
+  - [Dark mode](#dark-mode)
+  - [Once logged in](#once-logged-in)
+  - [Scrolling through a message](#scrolling-through-a-message)
+  - [Tutorial Page](#tutorial-page)
+- [Project breakdown](#project-breakdown)
+- [Development history](#development-history)
+- [Team Contract Link](#team-contract-link)
+- [Team Members](#team-members)
 
 ### Strategy
 
 Our project follows the Issue Driven Project Management (IDPM) guidelines. Due to very incompatible schedules, all team members will likely only meet in person during class on Monday and Wednesday mornings. Our primary mode of communication is done through Discord. Furthermore each member is assigned different tasks that are agreed upon between the assigner and assignee, with each task listed as an issue on the [source code repository](https://github.com/tryRebooting2023/askus).
 
-### ITS Ask Us
+### ITS Ask Us Overview
 
 The goal of this project is to improve the searching effectiveness of the University of Hawaii's Ask Us search engine, which takes in user queries and attempts to return a list of IT-related articles that may help the users resolve their IT issues. We will be attempting to implement an AI search engine which will hopefully alleviate the need to contact the IT help desk representative.
 
@@ -18,25 +33,33 @@ We plan on providing the interface for all users at the landing page, but also w
 
 ### The Application Anatomy
 
+This is a user-guide for Ask Us.
+
 #### Landing page
 
 Upon entering the [application's site](http://137.184.70.155/), this is what should be displayed:
 
-<img src="doc/M1_Landing.png">
+<img src="doc/m2-images/landing-page-1.png">
+<img src="doc/m2-images/landing-page-3.png">
 
-Users will immediately be allowed to use the Chat function upon landing. This is for the convenience of the general public being able to use it, right away. The input group to the left will send user queries to OpenAI for it to process and then return a statement intended to answer the input query. The navigation bar at the top is present on all pages and the logo, on click, will return users to landing or home depending on if the user is logged in. In addition to the logo is a dropdown menu with links to other parts of UH's main site, including a contact page for ITS.
+Users will immediately be allowed to use the Chat function upon landing. This is for the convenience of the general public being able to use it, right away. The input group to the left will send user queries to OpenAI for it to process and then return a statement intended to answer the input query. 
 
-#### Once logged in
-
-<img src="doc/light-mode.png">
-
-Users are either admin or non-admin. Their home pages are currently identical, but we do plan to implement additional features for logged in users. For admin users, in particular, we will grant them access to a 'user feedback' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating. This will be discussed in a later section. Non-Admins will have the chat updated to generate a form with each response asking if the response was good or bad. This information will be archived to the 'user feedback' page. 
+#### Navigation Bar
+The navigation bar at the top is present on all pages and the logo, on click, will return users to landing or home depending on if the user is logged in. In addition to the logo is a dropdown menu with links to other parts of UH's main site, to sign-up, or sign-in.
 
 #### Dark mode
 
-<img src="doc/M1_Landing.png">
+<img src="doc/m2-images/dark-light-mode-toggle.png" width="150px">
 
 We also offer a "dark mode" that the user may toggle on/off with the switch. This feature was decided as necessary as it reduces eye strain and cuts glare, especially at nighttime. We strive to maximize our audience's comfort while using our application. We have future ideas for personalization features to better satisfy a broad range of preferences.
+
+
+#### Once logged in
+
+Users are either admin or non-admin. Their home pages are currently identical. Admin users in particular are granted access to a
+'Analytics' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating.
+
+<img src="doc/m2-images/analytics.png">
 
 #### Scrolling through a message
 
@@ -44,7 +67,39 @@ We also offer a "dark mode" that the user may toggle on/off with the switch. Thi
 
 When a response is large enough, we enable a scrollable feature for that single response in order to reduce the space taken up by the number of responses. As seen in the screenshot, the user is able to scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response.
 
-#### Project breakdown
+#### Tutorial Page
+
+<img src="doc/m2-images/tutorial-page.png">
+
+Detailed intructions can be found through the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar.
+
+
+### Development guide
+
+This section provides information of interest to Meteor developers wishing to use this code base as a basis for their own development tasks.
+
+##### Initialization
+
+First, install [Meteor.](https://www.meteor.com/install)
+
+Second, visit the [Ask Us application github page](https://tryrebooting2023.github.io/), and click the “Use this template” button to create your own repository initialized with a copy of this application. Alternatively, you can download the sources as a zip file or make a fork of the repo. However you do it, download a copy of the repo to your local computer.
+
+Third, cd into the askus/app directory and install libraries with:
+
+``
+meteor npm install
+``
+
+Fourth, run the system with:
+
+``
+meteor npm install
+``
+
+If all goes well, the application will appear at http://localhost:3000.
+
+
+##### Project breakdown
 
 <img src="doc/Ask-Us-flowchart.png">
 
@@ -52,7 +107,45 @@ Our initial work involved setting up the chatbot and the databases. As illustrat
 
 On the other end, OpenAI was also used to provide the chat bot. We set up the bot to create embeddings of the user query and directly compare those embeddings to those within Pinecone's index in a process called [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity), which enables the semantic search operation our application was set to employ. Unfortunately, the construction process of the application took more time than we anticipated, so in general the UI was minimal at best.
 
-#### Development history
+#### Quality Assurance
+
+##### ESLint
+
+Ask Us includes a .eslintrc file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows:
+
+``meteor npm run lint``
+
+Here is sample output indicating that no ESLint errors were detected:
+
+
+````
+$ meteor npm run lint
+
+> meteor-application-template-react@ lint /Users/michelleuy/Desktop/github/askus/app
+> eslint --quiet --ext .jsx --ext .js ./imports && eslint --quiet --ext .js ./tests
+
+$
+````
+ESLint should run without generating any errors.
+
+It’s significantly easier to do development with ESLint integrated directly into your IDE (such as IntelliJ).
+
+##### End to End Testing
+
+Ask Us uses TestCafe to provide automated end-to-end testing.
+
+To run the end-to-end tests in development mode, you must first start up a BowFolios instance by invoking meteor npm run start in one console window.
+
+Then, in another console window, start up the end-to-end tests with:
+
+``meteor npm run testcafe``
+
+You will see browser windows appear and disappear as the tests run. If the tests finish successfully, you should see the following in your second console window:
+
+
+
+
+### Development history
 
 [M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1)  
 [M2 - November 15 - Present](https://github.com/orgs/tryRebooting2023/projects/2/views/1)  
@@ -64,4 +157,6 @@ As previously stated, we plan to update the site's user and admin pages to enabl
 
 ### Team Members
 
-This application is designed, implemented, and maintained by [James Ligeralde](https://jligeral.github.io/), [Frances Michelle Uy](https://frances-uy.github.io/), [Jonathan Sapolu](https://jsapolu99.github.io/) and [Michelle Ho](https://michho8.github.io/).
+This application is designed, implemented, and maintained by [James Ligeralde](https://jligeral.github.io/), [Frances Michelle Uy](https://frances-uy.github.io/), [Jonathan Sapolu](https://jsapolu99.github.io/) and [Michelle Ho](https://michho8.github.io/). 
+
+For contact information, please visit our contract link.
