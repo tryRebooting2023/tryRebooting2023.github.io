@@ -189,9 +189,10 @@ You will see browser windows appear and disappear as the tests run. If the tests
 ### Development history
 
 [M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1)  
-[M2 - November 15 - Present](https://github.com/orgs/tryRebooting2023/projects/2/views/1)  
-  
-As previously stated, we plan to update the site's user and admin pages to enable additional features. These additional features will be a handy resource for UH IT related topics. The user feedback page is the first new page we will create. Its implementation will involve setting up a new collection on MongoDB, displaying a form after each chatbot response for users to interact with, and creating the admin-only-accessible page which should display the feedback data. The last additional page we plan to implement is a tutorial page, which we will have accessible through the navigation bar. It walks you through how to maximize your search experience as a user.
+[M2 - November 15 - November 27](https://github.com/orgs/tryRebooting2023/projects/2/views/1)
+[M3 - November 27 -Present](https://github.com/orgs/tryRebooting2023/projects/3/views/1) 
+
+Our primary goal at this point is to collect user feedback and make improvements based on that. We also aim to improve UI design to further streamline application features.
 
 ### Team Contract Link:
 [Click Here](https://docs.google.com/document/d/15H0tS0bpVW0NQiGvWMAU79zyLRmt6mj2KbrBsFjrVd8/edit?usp=sharing)
