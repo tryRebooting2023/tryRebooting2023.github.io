@@ -99,6 +99,36 @@ meteor npm run start
 
 If all goes well, the application will appear at http://localhost:3000.
 
+##### Environment Keys
+
+An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `pineconeApiKey`, `pineconeEnvironment`, and `pineconeIndex` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
+
+Paste these values into the `settings.json` file. Here is a template for what the code should look like:
+
+```{
+  "monti": {
+    "appId": "FCus387ngT8biHwZK",
+    "appSecret": "3f4f7690-8a26-4ec4-998e-7a3ff8d6b8ae"
+  },
+
+  "defaultAccounts": [
+    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "john@foo.com", "password": "changeme" }
+  ],
+
+  "defaultData": [
+    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
+    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
+    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
+    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "openaiApiKey": "OPENAI_API_KEY",
+  "pineconeApiKey": "PINECONE_API_KEY",
+  "pineconeEnvironment": "PINECONE_ENVIRONMENT",
+  "pineconeIndex": "PINECONE_INDEX"
+}
+```
 
 ##### Project breakdown
 
