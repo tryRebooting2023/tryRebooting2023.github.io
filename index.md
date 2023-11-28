@@ -2,6 +2,7 @@
 layout: default
 ---
 # tryRebooting's Ask Us
+![ci-badge](https://github.com/tryRebooting2023/askus/workflows/its-ask-us/badge.svg)
 ## [Our Application's Deployment](http://137.184.70.155/)
 
 ## Table of Contents
@@ -14,7 +15,7 @@ layout: default
   - [Once logged in](#once-logged-in)
   - [Scrolling through a message](#scrolling-through-a-message)
   - [Tutorial Page](#tutorial-page)
-- [Project breakdown](#project-breakdown)
+- [Development Guide](#development-guide)
 - [Development history](#development-history)
 - [Team Contract Link](#team-contract-link)
 - [Team Members](#team-members)
@@ -93,7 +94,7 @@ meteor npm install
 Fourth, run the system with:
 
 ``
-meteor npm install
+meteor npm run start
 ``
 
 If all goes well, the application will appear at http://localhost:3000.
@@ -103,7 +104,8 @@ If all goes well, the application will appear at http://localhost:3000.
 
 <img src="doc/Ask-Us-flowchart.png">
 
-Our initial work involved setting up the chatbot and the databases. As illustrated in the diagram above, we had to parse several HTML files of its important text content, split the contents of each article into smaller chunks of text, convert these chunks into arrays of vectors, and then store these arrays into a dedicated vector database. We accomplished this by introducing additional technologies. [Cheerio](https://cheerio.js.org/) was used to parse the HTML content into a CSV file, which we then fed to [LangChain](https://js.langchain.com/docs/get_started/introduction). [OpenAI](https://openai.com/) provided us with the tools to create the text embeddings, and we utilized [Pinecone](https://docs.pinecone.io/docs/overview) to store our collection of embeddings.
+Our initial work involved setting up the chatbot and the databases. As illustrated in the diagram above, we had to parse several HTML files of its important text content, split the contents of each article into smaller chunks of text, convert these chunks into arrays of vectors, and then store these arrays into a dedicated vector database. We accomplished this by introducing additional technologies.         [Cheerio](https://cheerio.js.org/) was used to parse the HTML content into a CSV file, which we then fed to [LangChain](https://js.langchain.com/docs/get_started/introduction).  [OpenAI](https://openai.com/) provided us with the tools to create the text embeddings. [Pinecone](https://docs.pinecone.io/docs/overview) was utilized to store our collection of embeddings.
+
 
 On the other end, OpenAI was also used to provide the chat bot. We set up the bot to create embeddings of the user query and directly compare those embeddings to those within Pinecone's index in a process called [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity), which enables the semantic search operation our application was set to employ. Unfortunately, the construction process of the application took more time than we anticipated, so in general the UI was minimal at best.
 
@@ -142,7 +144,26 @@ Then, in another console window, start up the end-to-end tests with:
 
 You will see browser windows appear and disappear as the tests run. If the tests finish successfully, you should see the following in your second console window:
 
+```
+ % meteor npm run testcafe
 
+> meteor-application-template-react@ testcafe /Users/michelleuy/Desktop/github/askus/app
+> testcafe chrome tests/*.testcafe.js
+
+ Running tests in:
+ - Chrome 119.0.0.0 / Ventura 13
+
+ meteor-application-template-react localhost test with default db
+ ✓ Test that landing page shows up
+ ✓ Test that signin and signout work
+ ✓ Test the Analytics page
+ ✓ Test the Tutorial page
+ ✓ Test search function
+
+
+ 5 passed (21s)
+(base) michelleuy@MacBook-Pro-28 app %
+```
 
 
 ### Development history
