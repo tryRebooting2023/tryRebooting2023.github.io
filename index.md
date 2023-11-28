@@ -9,7 +9,7 @@ layout: default
 - [Strategy](#strategy)
 - [ITS Ask Us Overview](#its-ask-us-overview)
 - [The Application Anatomy](#the-application-anatomy)
-- [Landing Page](#landing-page)
+  - [Landing Page](#landing-page)
   - [Navigation Bar](#navigation-bar)
   - [Dark mode](#dark-mode)
   - [Once logged in](#once-logged-in)
@@ -32,13 +32,11 @@ We want this AI search engine to be able to respond to queries as helpfully as p
 
 We plan on providing the interface for all users at the landing page, but also want to provide login capabilities in order for the AI to be able to store previous chat sessions.
 
-### The Application Anatomy
-
-This is a user-guide for Ask Us.
+### User Guide
 
 #### Landing page
 
-Upon entering the [application's site](http://137.184.70.155/), this is what should be displayed:
+Upon entering the [application's site](https://askusits.site/), this is what should be displayed:
 
 <img src="doc/m2-images/landing-page-1.png">
 <img src="doc/m2-images/landing-page-3.png">
