@@ -91,19 +91,12 @@ Third, cd into the askus/app directory and install libraries with:
 meteor npm install
 ``
 
-Fourth, run the system with:
-
-``
-meteor npm run start
-``
-
-If all goes well, the application will appear at http://localhost:3000.
-
+Fourth, you need to create environment keys and follow these instructions:
 ##### Environment Keys
 
 An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `pineconeApiKey`, `pineconeEnvironment`, and `pineconeIndex` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
 
-Paste these values into the `settings.json` file. Here is a template for what the code should look like:
+Create a `settings.json` file and paste this template into it. Replace keys you made where appropriate.
 
 ```{
   "defaultData": [
@@ -119,6 +112,16 @@ Paste these values into the `settings.json` file. Here is a template for what th
   "pineconeIndex": "PINECONE_INDEX"
 }
 ```
+
+
+Fifth, run the system with:
+
+``
+meteor npm run start
+``
+
+If all goes well, the application will appear at http://localhost:3000.
+
 
 ##### Project breakdown
 
@@ -156,7 +159,7 @@ It’s significantly easier to do development with ESLint integrated directly in
 
 Ask Us uses TestCafe to provide automated end-to-end testing.
 
-To run the end-to-end tests in development mode, you must first start up a BowFolios instance by invoking meteor npm run start in one console window.
+To run the end-to-end tests in development mode, you must first start up a Ask Us instance by invoking meteor npm run start in one console window.
 
 Then, in another console window, start up the end-to-end tests with:
 
