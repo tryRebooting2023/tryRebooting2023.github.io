@@ -189,9 +189,11 @@ You will see browser windows appear and disappear as the tests run. If the tests
 
 ### Development history
 
-[M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1)  
+[M1 - October 25 - November 15](https://github.com/orgs/tryRebooting2023/projects/1/views/1) 
+
 [M2 - November 15 - November 27](https://github.com/orgs/tryRebooting2023/projects/2/views/1)
-[M3 - November 27 -Present](https://github.com/orgs/tryRebooting2023/projects/3/views/1) 
+
+[M3 - November 27 - Present](https://github.com/orgs/tryRebooting2023/projects/3/views/1) 
 
 Our primary goal at this point is to collect user feedback and make improvements based on that. We also aim to improve UI design to further streamline application features.
 
