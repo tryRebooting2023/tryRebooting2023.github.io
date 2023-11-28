@@ -8,7 +8,7 @@ layout: default
 ## Table of Contents
 - [Strategy](#strategy)
 - [ITS Ask Us Overview](#its-ask-us-overview)
-- [The Application Anatomy](#the-application-anatomy)
+- [User Guide](#user-guide)
   - [Landing Page](#landing-page)
   - [Navigation Bar](#navigation-bar)
   - [Dark mode](#dark-mode)
