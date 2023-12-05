@@ -3,7 +3,7 @@ layout: default
 ---
 # tryRebooting's Ask Us
 ![ci-badge](https://github.com/tryRebooting2023/askus/workflows/its-ask-us/badge.svg)
-## [Our Application's Deployment](https://askusits.site/)
+## [Our Deployed Project](https://askusits.site/)
 
 ## Table of Contents
 - [Strategy](#strategy)
@@ -30,66 +30,64 @@ The goal of this project is to improve the searching effectiveness of the Univer
 
 We want this AI search engine to be able to respond to queries as helpfully as possible for anyone with a specific question, or even a general topic to a question. This means being able to ask follow-up questions to unclear queries and being conversational.
 
-We plan on providing the interface for all users at the landing page, but also want to provide login capabilities in order for the AI to be able to store previous chat sessions.
+We plan on providing the interface for all users at the landing page, but also want to provide login capabilities in order for the AI to be able to store previous chat sessions. This includes "admin" accounts that have access to our "Analytics" page that helps to show the most popular articles used as references to form a response.
 
-### User Guide
+## User Guide
 
-#### Landing page
+### Landing page
 
 Upon entering the [application's site](https://askusits.site/), this is what should be displayed:
 
 <img src="doc/m2-images/landing-page-1.png">
 <img src="doc/m2-images/landing-page-3.png">
 
-Users will immediately be allowed to use the Chat function upon landing. This is for the convenience of the general public being able to use it, right away. The input group to the left will send user queries to OpenAI for it to process and then return a statement intended to answer the input query. 
+Users will immediately be allowed to use the Chat function upon landing. This is for the convenience of the general public being able to use it, right away. The input group to the left will send user queries to OpenAI for it to process and then return a response intended to answer the input query. 
 
-#### Navigation Bar
-The navigation bar at the top is present on all pages and the logo, on click, will return users to landing or home depending on if the user is logged in. In addition to the logo is a dropdown menu with links to other parts of UH's main site, to sign-up, or sign-in.
+### Navigation Bar
 
-#### Dark mode
+<img src="doc/m3-images/navigation-bar.png">
+
+The navigation bar at the top is present on all pages and allows for quick navigation through different pages. The logo, on click, will return users to the landing or home depending on if the user is logged in. The dropdown menu on the top right includes links to other pages of the UH ITS main site, such as a "About" page. Of course, there will be a drop down under the "LOGIN" tab to sign-up or sign-in. This is also where the user's email will be shown when logged in.l 
+
+### Dark mode
 
 <img src="doc/m2-images/dark-light-mode-toggle.png" width="150px">
 
 We also offer a "dark mode" that the user may toggle on/off with the switch. This feature was decided as necessary as it reduces eye strain and cuts glare, especially at nighttime. We strive to maximize our audience's comfort while using our application. We have future ideas for personalization features to better satisfy a broad range of preferences.
 
+### Once logged in
 
-#### Once logged in
-
-Users are either admin or non-admin. Their home pages are currently identical. Admin users in particular are granted access to a
-'Analytics' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating.
+Users are either admin or non-admin. Their home pages are currently identical. Admin users in particular are granted access to an 'Analytics' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating. This allows for an easy visual representation of which articles have been referenced the most which enables developers and ITS employees to concentrate on improving ease of access to these particular articles.
 
 <img src="doc/m2-images/analytics.png">
 
-#### Scrolling through a message
+### Scrolling through a message
 
 <img src="doc/scroll-feature.png">
 
-When a response is large enough, we enable a scrollable feature for that single response in order to reduce the space taken up by the number of responses. As seen in the screenshot, the user is able to scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response.
+When a response is large enough, we enable a scrollable feature for that single response in order to reduce the space taken up by the number of responses. As seen in the screenshot, the user is able to scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response. With M2 completed, the conversation will now automatically scroll down to the most recent response.
 
-#### Tutorial Page
+### Tutorial Page
 
 <img src="doc/m2-images/tutorial-page.png">
 
-Detailed intructions can be found through the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar.
+Detailed intructions of our site can be found through the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar. We included screenshots of the particular sections on our page in order to make it easy for readers to follow.
 
+## Community Feedback
 
-### Development guide
+## Developer Guide
 
 This section provides information of interest to Meteor developers wishing to use this code base as a basis for their own development tasks.
 
-##### Initialization
+### Initialization
 
-First, install [Meteor.](https://www.meteor.com/install)
-
-Second, visit the [Ask Us application github page](https://tryrebooting2023.github.io/), and click the “Use this template” button to create your own repository initialized with a copy of this application. Alternatively, you can download the sources as a zip file or make a fork of the repo. However you do it, download a copy of the repo to your local computer.
-
-Third, cd into the askus/app directory and install libraries with:
-
+1. Install [Meteor.](https://www.meteor.com/install)
+2. Visit the [Ask Us application github page](https://tryrebooting2023.github.io/), and click the “Use this template” button to create your own repository initialized with a copy of this application. Alternatively, you can download the sources as a zip file or make a fork of the repo. However you do it, download a copy of the repo to your local computer.
+3. cd into the askus/app directory (using `cd app`) and install libraries with:
 ``
 meteor npm install
 ``
-
-Fourth, you need to create environment keys and follow these instructions:
+4. You need to create environment keys and follow these instructions:
 ##### Environment Keys
 
 An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `pineconeApiKey`, `pineconeEnvironment`, and `pineconeIndex` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
@@ -104,24 +102,18 @@ Create a `settings.json` file and paste this template into it. Replace keys you 
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
-  "openaiApiKey": "OPENAI_API_KEY",
-  "pineconeApiKey": "PINECONE_API_KEY",
-  "pineconeEnvironment": "PINECONE_ENVIRONMENT",
-  "pineconeIndex": "PINECONE_INDEX"
+  "OPENAI_API_KEY": "your-openai-api-key",
+  "PINECONE_API_KEY": "your-pinecone-api-key",
+  "PINECONE_ENVIRONMENT": "your-pinecone-environment",
+  "PINECONE_INDEX": "your-pinecone-index"
 }
 ```
 
-
-Fifth, run the system with:
-
-``
-meteor npm run start
-``
+5. Run the system with: `meteor npm run start`
 
 If all goes well, the application will appear at http://localhost:3000.
 
-
-##### Project breakdown
+## Project breakdown
 
 <img src="doc/Ask-Us-flowchart.png">
 
@@ -130,9 +122,9 @@ Our initial work involved setting up the chatbot and the databases. As illustrat
 
 On the other end, OpenAI was also used to provide the chat bot. We set up the bot to create embeddings of the user query and directly compare those embeddings to those within Pinecone's index in a process called [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity), which enables the semantic search operation our application was set to employ. Unfortunately, the construction process of the application took more time than we anticipated, so in general the UI was minimal at best.
 
-#### Quality Assurance
+## Quality Assurance
 
-##### ESLint
+## ESLint
 
 Ask Us includes a .eslintrc file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows:
 
