@@ -45,9 +45,9 @@ Users will immediately be allowed to use the Chat function upon landing. This is
 
 ### Navigation Bar
 
-<img src="doc/m3-images/navigation-bar.png">
+<img src="doc/navigation-bar.png">
 
-The navigation bar at the top is present on all pages and allows for quick navigation through different pages. The logo, on click, will return users to the landing or home depending on if the user is logged in. The dropdown menu on the top right includes links to other pages of the UH ITS main site, such as a "About" page. Of course, there will be a drop down under the "LOGIN" tab to sign-up or sign-in. This is also where the user's email will be shown when logged in.l 
+The navigation bar at the top is present on all pages and allows for quick navigation through different pages. The logo, on click, will return users to the landing or home depending on if the user is logged in. The dropdown menu on the top right includes links to other pages of the UH ITS main site, such as an "About" page. Of course, there will be a drop-down under the "Log in" tab to sign up or sign in. This is also where the user's email will be shown when logged in.
 
 ### Dark mode
 
@@ -65,15 +65,21 @@ Users are either admin or non-admin. Their home pages are currently identical. A
 
 <img src="doc/scroll-feature.png">
 
-When a response is large enough, we enable a scrollable feature for that single response in order to reduce the space taken up by the number of responses. As seen in the screenshot, the user is able to scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response. With M2 completed, the conversation will now automatically scroll down to the most recent response.
+When a response is large enough, we enable a scrollable feature for that single response to reduce the space taken up by the number of responses. As seen in the screenshot, the user can scroll down the singular message without needing to move the other responses. It is currently being debated whether we want the whole conversation compacted and scrollable or continue using the singular, scrollable response. With M2 completed, the conversation will now automatically scroll down to the most recent response.
 
 ### Tutorial Page
 
 <img src="doc/m2-images/tutorial-page.png">
 
-Detailed intructions of our site can be found through the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar. We included screenshots of the particular sections on our page in order to make it easy for readers to follow.
+Detailed instructions on our site can be found on the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar. We included screenshots of the particular sections on our page to make it easy for readers to follow.
 
 ## Community Feedback
+
+From our testing, we found that providing the "Related Article Links" was a popular feature. Most testers complimented this function as it was beneficial to them because those links provided further detail into what the question topic is. The "Tutorial" page was also a liked feature as it was simple enough to read through and understand. Our testers, on average, voted 3.7/5 in terms of how likely they would use the application.
+
+However, there were some complaints about implementing more content, bugs, and the UI design. The main complaint we received was that the site doesn't look like a "conversation" with the bot. Users would rather be presented with a familiar space, such as seeing the user's inputs to the right and the responses to the left. It was foreseen that having not much content would be a complaint because our main page, and focus, is on the "Chat Bot itself. This can go hand-in-hand with the UI design where users may want more "content" to look at or to interact with. There were some bugs that our team hadn't thought of, such as ensuring the "Home" tab works, mainly because we focused on getting the responses as accurate as possible. 
+
+From the overall feedback, our team will work on fixing the bugs found and changing the UI to resemble a conversation similar to how a text message would be seen on mobile phones. We are also working to include more content for the user such as adding reactions or an optional "send feedback" form to fill out. This way, the user feels as though there is a lot of effort put into the project without overpopulating the page.
 
 ## Developer Guide
 
@@ -83,11 +89,9 @@ This section provides information of interest to Meteor developers wishing to us
 
 1. Install [Meteor.](https://www.meteor.com/install)
 2. Visit the [Ask Us application github page](https://tryrebooting2023.github.io/), and click the “Use this template” button to create your own repository initialized with a copy of this application. Alternatively, you can download the sources as a zip file or make a fork of the repo. However you do it, download a copy of the repo to your local computer.
-3. cd into the askus/app directory (using `cd app`) and install libraries with:
-``
-meteor npm install
-``
+3. cd into the askus/app directory (using `cd app`) and install libraries with: `meteor npm install`
 4. You need to create environment keys and follow these instructions:
+   
 ##### Environment Keys
 
 An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `pineconeApiKey`, `pineconeEnvironment`, and `pineconeIndex` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
@@ -117,18 +121,16 @@ If all goes well, the application will appear at http://localhost:3000.
 
 <img src="doc/Ask-Us-flowchart.png">
 
-Our initial work involved setting up the chatbot and the databases. As illustrated in the diagram above, we had to parse several HTML files of its important text content, split the contents of each article into smaller chunks of text, convert these chunks into arrays of vectors, and then store these arrays into a dedicated vector database. We accomplished this by introducing additional technologies.         [Cheerio](https://cheerio.js.org/) was used to parse the HTML content into a CSV file, which we then fed to [LangChain](https://js.langchain.com/docs/get_started/introduction).  [OpenAI](https://openai.com/) provided us with the tools to create the text embeddings. [Pinecone](https://docs.pinecone.io/docs/overview) was utilized to store our collection of embeddings.
+Our initial work involved setting up the chatbot and the databases. As illustrated in the diagram above, we had to parse several HTML files of their important text content, split the contents of each article into smaller chunks of text, convert these chunks into arrays of vectors, and then store these arrays into a dedicated vector database. We accomplished this by introducing additional technologies.         [Cheerio](https://cheerio.js.org/) was used to parse the HTML content into a CSV file, which we then fed to [LangChain](https://js.langchain.com/docs/get_started/introduction).  [OpenAI](https://openai.com/) provided us with the tools to create the text embeddings. [Pinecone](https://docs.pinecone.io/docs/overview) was utilized to store our collection of embeddings.
 
 
-On the other end, OpenAI was also used to provide the chat bot. We set up the bot to create embeddings of the user query and directly compare those embeddings to those within Pinecone's index in a process called [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity), which enables the semantic search operation our application was set to employ. Unfortunately, the construction process of the application took more time than we anticipated, so in general the UI was minimal at best.
+On the other end, OpenAI was also used to provide the chatbot. We set up the bot to create embeddings of the user query and directly compare those embeddings to those within Pinecone's index in a process called [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity), which enables the semantic search operation our application was set to employ. Unfortunately, the construction process of the application took more time than we anticipated, so in general, the UI was minimal at best.
 
 ## Quality Assurance
 
-## ESLint
+### ESLint
 
-Ask Us includes a .eslintrc file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows:
-
-``meteor npm run lint``
+Ask Us includes a .eslintrc file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows: `meteor npm run lint`
 
 Here is sample output indicating that no ESLint errors were detected:
 
