@@ -11,6 +11,7 @@ layout: default
 - [User Guide](#user-guide)
   - [Landing Page](#landing-page)
   - [Navigation Bar](#navigation-bar)
+  - [Footer](#footer)
   - [Dark mode](#dark-mode)
   - [Once logged in](#once-logged-in)
   - [Scrolling through a message](#scrolling-through-a-message)
@@ -51,6 +52,12 @@ Users will immediately be allowed to use the Chat function upon landing. This is
 <img src="doc/navigation-bar.png">
 
 The navigation bar at the top is present on all pages and allows for quick navigation through different pages. The logo, on click, will return users to the landing or home depending on if the user is logged in. The dropdown menu on the top right includes links to other pages of the UH ITS main site, such as an "About" page. Of course, there will be a drop-down under the "Log in" tab to sign up or sign in. This is also where the user's email will be shown when logged in.
+
+### Footer
+
+<img src="doc/footer.png">
+
+The footer includes some information about the maintenance team. Some hyperlinks allow for quick access to our team's information page (this page), a Google Form for feedback, and the official ITS Contact page.
 
 ### Dark mode
 
