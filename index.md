@@ -24,10 +24,6 @@ layout: default
 - [Team Contract Link](#team-contract-link)
 - [Team Members](#team-members)
 
-### Strategy
-
-Our project follows the Issue Driven Project Management (IDPM) guidelines. Due to very incompatible schedules, all team members will likely only meet in person during class on Monday and Wednesday mornings. Our primary mode of communication is done through Discord. Furthermore each member is assigned different tasks that are agreed upon between the assigner and assignee, with each task listed as an issue on the [source code repository](https://github.com/tryRebooting2023/askus).
-
 ### ITS Ask Us Overview
 
 The goal of this project is to improve the searching effectiveness of the University of Hawaii's Ask Us search engine, which takes in user queries and attempts to return a list of IT-related articles that may help the users resolve their IT issues. We will be attempting to implement an AI search engine which will hopefully alleviate the need to contact the IT help desk representative.
@@ -35,6 +31,10 @@ The goal of this project is to improve the searching effectiveness of the Univer
 We want this AI search engine to be able to respond to queries as helpfully as possible for anyone with a specific question, or even a general topic to a question. This means being able to ask follow-up questions to unclear queries and being conversational.
 
 We plan on providing the interface for all users at the landing page, but also want to provide login capabilities in order for the AI to be able to store previous chat sessions. This includes "admin" accounts that have access to our "Analytics" page that helps to show the most popular articles used as references to form a response.
+
+### Strategy
+
+Our project follows the Issue Driven Project Management (IDPM) guidelines. Due to very incompatible schedules, all team members will likely only meet in person during class on Monday and Wednesday mornings. Our primary mode of communication is done through Discord. Furthermore each member is assigned different tasks that are agreed upon between the assigner and assignee, with each task listed as an issue on the [source code repository](https://github.com/tryRebooting2023/askus).
 
 ## User Guide
 
@@ -189,9 +189,7 @@ You will see browser windows appear and disappear as the tests run. If the tests
 
 [M2 - November 15 - November 27](https://github.com/orgs/tryRebooting2023/projects/2/views/1)
 
-[M3 - November 27 - Present](https://github.com/orgs/tryRebooting2023/projects/3/views/1) 
-
-Our primary goal at this point is to collect user feedback and make improvements based on that. We also aim to improve UI design to further streamline application features.
+[M3 - November 27 - December 10](https://github.com/orgs/tryRebooting2023/projects/3/views/1) 
 
 ### Team Contract Link:
 [Click Here](https://docs.google.com/document/d/15H0tS0bpVW0NQiGvWMAU79zyLRmt6mj2KbrBsFjrVd8/edit?usp=sharing)
