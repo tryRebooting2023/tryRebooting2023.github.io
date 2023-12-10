@@ -108,19 +108,11 @@ An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articl
 
 Create a `settings.json` file and paste this template into it. Replace keys you made where appropriate.
 
-```{
-  "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
-  ],
-
+```
   "OPENAI_API_KEY": "your-openai-api-key",
   "PINECONE_API_KEY": "your-pinecone-api-key",
   "PINECONE_ENVIRONMENT": "your-pinecone-environment",
   "PINECONE_INDEX": "your-pinecone-index"
-}
 ```
 
 5. Run the system with: `meteor npm run start`
