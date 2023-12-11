@@ -112,7 +112,7 @@ Create a `settings.json` file and paste this template into it. Replace keys you 
   "OPENAI_API_KEY": "your-openai-api-key",
   "PINECONE_API_KEY": "your-pinecone-api-key",
   "PINECONE_ENVIRONMENT": "your-pinecone-environment",
-  "PINECONE_INDEX": "your-pinecone-index"
+  "PINECONE_INDEX": "your-pinecone-index",
   "GOOGLE_CLIENT_ID": "your-google-client-id",
   "GOOGLE_CLIENT_SECRET": "your-google-client-secret"
 ```
