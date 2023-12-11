@@ -65,6 +65,9 @@ The footer includes some information about the maintenance team. Some hyperlinks
 
 We also offer a "dark mode" that the user may toggle on/off with the switch. This feature was decided as necessary as it reduces eye strain and cuts glare, especially at nighttime. We strive to maximize our audience's comfort while using our application. We have future ideas for personalization features to better satisfy a broad range of preferences.
 
+### Sign-In Page
+Upon selecting the 'Sign In' option within the login dropdown situated at the upper right corner of the navigation bar, users will be directed to the Sign-In page. Here, they have the option to log in using their email and password or opt for Google Authentication. Moreover, for individuals without an existing account, they can conveniently navigate to the 'Sign Up' page by clicking the 'Click here to Register' hyperlink.  
+
 ### Once logged in
 
 Users are either admin or non-admin. Their home pages are currently identical. Admin users in particular are granted access to an 'Analytics' page which should provide a list of queries and their associated AI-generated responses along with a positive or negative rating. This allows for an easy visual representation of which articles have been referenced the most which enables developers and ITS employees to concentrate on improving ease of access to these particular articles.
