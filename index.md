@@ -66,6 +66,9 @@ The footer includes some information about the maintenance team. Some hyperlinks
 We also offer a "dark mode" that the user may toggle on/off with the switch. This feature was decided as necessary as it reduces eye strain and cuts glare, especially at nighttime. We strive to maximize our audience's comfort while using our application. We have future ideas for personalization features to better satisfy a broad range of preferences.
 
 ### Sign-In Page
+
+<img src="doc/979C376C-B0C2-49BF-9129-CDC9F267D416.jpeg">
+
 Upon selecting the 'Sign In' option within the login dropdown situated at the upper right corner of the navigation bar, users will be directed to the Sign-In page. Here, they have the option to log in using their email and password or opt for Google Authentication. Moreover, for individuals without an existing account, they can conveniently navigate to the 'Sign Up' page by clicking the 'Click here to Register' hyperlink.  
 
 ### Once logged in
