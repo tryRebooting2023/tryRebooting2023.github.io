@@ -104,7 +104,7 @@ This section provides information of interest to Meteor developers wishing to us
    
 ##### Environment Keys
 
-An `openaiApiKey` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `pineconeApiKey`, `pineconeEnvironment`, and `pineconeIndex` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
+An `OPENAI_API_KEY` must be set up from [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) and a `PINECONE_API_KEY`, `PINECONE_ENVIRONMENT`, and `PINECONE_INDEX` must be set up from  [Pinecone](https://docs.pinecone.io/docs/quickstart). Lastly a `GOOGLE_CLIENT_ID`, and `GOOGLE_CLIENT_SECRET` must be set up from [Google Identity](https://developers.google.com/identity/protocols/oauth2) in order for the chat to function. Please refer to their respective API Quickstart guides on best practices for this. Do not share personal keys with anyone, and keep them safe.
 
 Create a `settings.json` file and paste this template into it. Replace keys you made where appropriate.
 
@@ -113,6 +113,8 @@ Create a `settings.json` file and paste this template into it. Replace keys you 
   "PINECONE_API_KEY": "your-pinecone-api-key",
   "PINECONE_ENVIRONMENT": "your-pinecone-environment",
   "PINECONE_INDEX": "your-pinecone-index"
+  "GOOGLE_CLIENT_ID": "your-google-client-id",
+  "GOOGLE_CLIENT_SECRET": "your-google-client-secret"
 ```
 
 5. Run the system with: `meteor npm run start`
