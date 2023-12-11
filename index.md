@@ -85,7 +85,7 @@ When a response is large enough, we enable a scrollable feature for that single 
 
 ### Tutorial Page
 
-<img src="doc/m2-images/tutorial-page.png">
+<img src="doc/FEFFB4DA-570F-47ED-A2F9-7804C1D2D6D0.jpeg">
 
 Detailed instructions on our site can be found on the ʻTutorialʻ page, accessed through the toggle dropdown in the navigation bar. We included screenshots of the particular sections on our page to make it easy for readers to follow.
 
